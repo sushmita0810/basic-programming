@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int t, n;
+    cin>>t;
+    while(t--){
+        cin>>n;
+        int arr[n][n];
+        int i = 0, iBeg = 0, j = 0, jBeg = 0, ctr;
+        for(ctr = 1; ctr <= n * n; ++ctr){
+            arr[i][j] = ctr;
+            if(i != jBeg && j != iBeg){
+                i++;
+                j--;
+            }
+            else {
+                jBeg++;
+                if(jBeg == n){
+                    iBeg++;
+                    jBeg--;
+                }
+                 i = iBeg;
+                 j = jBeg;
+            }
+        }
+        for(i = 0; i < n; ++i){
+            for(j = 0; j < n; ++j){
+                cout<<arr[i][j]<<" ";
+            }
+            cout<<endl;
+        }
+    }
+    return 0;
+}
