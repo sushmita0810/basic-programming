@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int t;
+    cin>>t;
+    while(t--){
+        long n,c=0;
+        cin>>n;
+        while(n>=100){
+            c=c+(n/100);
+            n=n%100;
+        }
+        while(n>=50){
+            c=c+(n/50);
+            n=n%50;
+        }
+        while(n>=10){
+            c=c+(n/10);
+            n=n%10;
+        }
+        while(n>=5){
+            c=c+(n/5);
+            n=n%5;
+        }
+        while(n>=2){
+            c=c+(n/2);
+            n=n%2;
+        }
+        if(n>0)
+            c=c+n;
+        cout<<c<<endl;
+    }
+	return 0;
+}
