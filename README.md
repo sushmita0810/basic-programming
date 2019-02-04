@@ -8,4 +8,5 @@ now, get ur hands dirty
 3.TRI_COIN -TRIANGLE MADE OF COIN
 4.SMALLEST NUMBER OF NOTES
 5.
+6.
 
